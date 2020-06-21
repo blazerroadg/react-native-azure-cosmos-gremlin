@@ -1,0 +1,32 @@
+{
+  "name": "react-native-azure-cosmos-gremlin",
+  "version": "1.0.0",
+  "description": "This package provide rest api for azure cosmos germlin graph data base query access",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blazerroad/react-native-azure-cosmos-gremlin.git"
+  },
+  "dependencies": {
+    "crypto-js": "^3.2.0"
+  },
+  "keywords": [
+    "react-native",
+    "react native",
+    "azure cosmos gremlin",
+    "azure",
+    "azure cosmos",
+    "azure cosmos germlin rest api",
+    "rest api",
+    "germlin rest api"
+  ],
+  "author": "blazerroad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blazerroad/react-native-azure-cosmos-gremlin/issues"
+  },
+  "homepage": "https://github.com/blazerroad/react-native-azure-cosmos-gremlin#readme"
+}
