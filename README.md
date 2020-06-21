@@ -86,7 +86,7 @@ copy this function on your azure app function body
 Import library
 
 ```javascript
-import { azuregermlinfetch, initAzureCosmos } from './azureCosmosGremlin/germlin'
+import { azuregermlinfetch, initCosmosGermlin } from './azureCosmosGremlin/germlin'
 ```
 
 init azure cosmos germlin setting 
