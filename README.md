@@ -86,7 +86,7 @@ copy this function on your azure app function body
 Import library
 
 ```javascript
-import { azuregermlinfetch, initCosmosGermlin } from './azureCosmosGremlin/germlin'
+import { azuregermlinfetch, initCosmosGermlin } from 'react-native-azure-cosmos-gremlin/germlin'
 ```
 
 init azure cosmos germlin setting 
