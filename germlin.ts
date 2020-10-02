@@ -16,10 +16,11 @@ class Param {
     value: string;
 }
 
-interface FetchParam {
+export interface FetchParam {
     query: string;
-    parameters: Array<Param>;
-    stateName: string
+    parameters: Array<Param>,
+    actionName: string
+
 }
 class AuthParam {
     constructor(paramscount: number, methodname: string, date: string, key: string) {
@@ -46,7 +47,8 @@ class AzureGermlin {
     }
 
     public fetch(param: FetchParam): Promise<Response> {
-        const isValid = cache(param.stateName, undefined)
+
+        const isValid = cache(param.actionName, undefined)
         if (isValid) {
             const response = new Response(null, { status: 304, statusText: "cache" })
             return new Promise<Response>((resolve, reject) => {
@@ -84,7 +86,7 @@ export const azuregermlinfetch = async (param: FetchParam) => {
 }
 
 
-export const initAzureCosmos = (config: AzureConfig) => {
+export const initCosmosGermlin = (config: AzureConfig) => {
     AzureGermlin.config = config;
 }
 
