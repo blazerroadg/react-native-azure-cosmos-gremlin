@@ -1,6 +1,6 @@
 {
   "name": "react-native-azure-cosmos-gremlin",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This package provide rest api for azure cosmos germlin graph data base query access",
   "main": "index.js",
   "scripts": {

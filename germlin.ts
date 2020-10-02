@@ -7,7 +7,7 @@ interface AzureConfig {
     methodname: string;
 
 }
-class Param {
+export class Param {
     constructor(name: string, value: string) {
         this.name = name;
         this.value = value
@@ -22,6 +22,19 @@ export interface FetchParam {
     actionName: string
 
 }
+
+
+export class FetchParamDefualt implements FetchParam {
+    query: string;
+    parameters: Array<Param>;
+    actionName: string
+    constructor(query: string, parameters: Array<Param>, actionName: string) {
+        this.query = query;
+        this.parameters = parameters;
+        this.actionName = actionName;
+    }
+}
+
 class AuthParam {
     constructor(paramscount: number, methodname: string, date: string, key: string) {
         this.paramscount = paramscount;
