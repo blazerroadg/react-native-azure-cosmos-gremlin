@@ -1,7 +1,7 @@
 import CryptoJS from 'crypto-js'
 import { cache } from 'react-native-fetch-cache/cacheResolver'
 
-interface AzureConfig {
+export interface AzureConfig {
     masterkey: string;
     serviceurl: string;
     methodname: string;
