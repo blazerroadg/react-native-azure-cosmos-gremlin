@@ -20,6 +20,7 @@ export interface FetchParam {
     query: string;
     parameters: Array<Param>,
     actionName: string
+    auth?: string;
 
 }
 
@@ -27,11 +28,13 @@ export interface FetchParam {
 export class FetchParamDefualt implements FetchParam {
     query: string;
     parameters: Array<Param>;
-    actionName: string
-    constructor(query: string, parameters: Array<Param>, actionName: string) {
+    actionName: string;
+    auth?: string;
+    constructor(query: string, parameters: Array<Param>, actionName: string, auth?: string) {
         this.query = query;
         this.parameters = parameters;
         this.actionName = actionName;
+        this.auth = auth;
     }
 }
 
@@ -71,7 +74,7 @@ class AzureGermlin {
 
         const today = new Date();
         const UTCstring = today.toUTCString();
-        const auth = this.auth(new AuthParam(param.parameters.length, AzureGermlin.config.methodname, UTCstring, AzureGermlin.config.masterkey))
+        const auth = param.auth ? param.auth : this.auth(new AuthParam(param.parameters.length, AzureGermlin.config.methodname, UTCstring, AzureGermlin.config.masterkey))
         return fetch(AzureGermlin.config.serviceurl, {
             method: 'POST',
             headers: {
