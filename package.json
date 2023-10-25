@@ -11,7 +11,7 @@
     "url": "git+https://github.com/blazerroad/react-native-azure-cosmos-gremlin.git"
   },
   "dependencies": {
-    "crypto-js": "^3.2.0",
+    "crypto-js": "^4.2.0",
     "react-native-fetch-cache": "^1.0.0"
   },
   "keywords": [
